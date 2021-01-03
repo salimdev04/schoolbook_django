@@ -26,7 +26,7 @@ SECRET_KEY = 'y^80_6x8ob=@4fjfi3$7=3s(0o6=&72*)4!adi_)*eq$wcxx8i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['schoolbooktest.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
