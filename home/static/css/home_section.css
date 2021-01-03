@@ -1,0 +1,60 @@
+
+/* Card SECTion+++++================= */
+
+img {
+    height: 180px;
+    width: 350px;
+    overflow: hidden;
+  }
+  
+  .section {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 45% 45%;
+    margin: 20px;
+    padding-right: 25px;
+  }
+  
+  .card {
+    overflow: hidden;
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 8px;
+    max-height: 450px;
+    transition: transform 500ms;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card--content {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card--content__header {
+    text-align: center;
+    background-color: blanchedalmond;
+  }
+  
+  .card--content__header span {
+    font-size: smaller;
+  }
+  
+  .card--content__footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card--content__footer span {
+    font-size: smaller;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+  

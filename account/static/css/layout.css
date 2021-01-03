@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kumbh Sens", sans-serif;
+}
+
+.account__auth {
+  position: absolute;
+  background-color:#eee;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  padding: 15px;
+}
+
+form {
+  width: 250px;
+}
+
+
+input {
+  margin: 15px;
+  width: 100%;
+  height: 35px;
+  padding: 5px 30px 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #737272;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.account__form__button {
+  margin: 15px;
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  padding: 5px 30px 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #737272;
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+
+.account__form__button:hover {
+  transform: scale(1.1);
+}
+
+.account__auth__p {
+  width: 250px;
+}
+
+p {
+  font-weight: lighter;
+}
+a {
+  text-decoration: none;
+  color: red;
+  font-size:14;
+}
+

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> {% block title %}{% endblock %} </title>
+        <link href="{% static 'css/home_layout.css' %}" rel='stylesheet'/>
+        <link href="{% static 'css/student_layout.css' %}" rel='stylesheet'/>
+    </head>
+    <body>
+        <header> {% include "navbar.html" %} </header>
+        <div id="content">
+            <div id="sidebar">
+                {% include "sidebar.html" %}
+            </div>
+            <div id="section">
+                {% block section %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

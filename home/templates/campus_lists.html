@@ -1,0 +1,29 @@
+
+
+    <div class="section">
+        {% for campus in campus_lists %}
+            <a href="{{ campus.get_absolute_url }}" class="card">
+
+            <img class="card-image" src="https://i.f1g.fr/media/eidos/805x453_crop/2018/01/10/XVM1a1b9448-f60e-11e7-adbe-e5630109b1d6.jpg"/>
+                <div class="card--content">
+                    <div class="card--content__header">
+                        <h3>{{ campus.title }}</h3>
+                        <span>{{campus.site_web}}</span>
+                    </div>
+                    <div class="card--content__body">
+                        <p > {{ campus.description| truncatewords_html:25 |linebreaks}}</p>
+                    </div>
+                    <div class="card--content__footer">
+                        <span>Inscription: Active</span>
+                        <span> {{ campus.created_at }} </span>
+                    </div>
+                </div>
+
+            </a>
+        {% endfor %}
+    </div>
+
+
+
+
+

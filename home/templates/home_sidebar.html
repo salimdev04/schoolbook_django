@@ -1,0 +1,12 @@
+<div class="sidebar">
+    <div class="sidebar__card">
+        <div class="sidebar__search">
+            <input placeholder="Recherche" />
+        </div>
+        <div class="sidebar__content">
+            {% for pays in categories %}
+                <a href="{{pays.get_absolute_url }}" class="sidebar__content--title">{{ pays }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

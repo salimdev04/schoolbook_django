@@ -1,0 +1,48 @@
+{% extends 'student_layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block section %}
+    <div >
+    <h1> Informations Personnel </h1>
+    <form mehod='POST'>
+        <div class="input__div">
+            <h4>Nom</h4>
+            {{ info_perso_form.nom }}
+        </div>
+        <div class="input__div">
+            <h4>Prenom</h4>
+            {{ info_perso_form.prenom }}
+        </div>
+        <div class="input__div">
+            <h4>Nationalite</h4>
+            {{ info_perso_form.nationalite }}
+        </div>
+        <div class="input__div">
+            <h4>Civilite</h4>
+            {{ info_perso_form.civilite }}
+        </div>
+        <div class="input__div">
+            <h4>Numero de telephone</h4>
+            {{ info_perso_form.phone }}
+        </div>
+        <div class="input__div">
+            <h4>Date de naissance</h4>
+            {{ info_perso_form.date_naissance }}
+        </div>
+        <div class="input__div">
+            <h4>Pays d'origine</h4>
+            {{ info_perso_form.pays_naissance }}
+        </div>
+        <div class="input__div">
+            <h4>Ville d'origine</h4>
+            {{ info_perso_form.ville_naissance }}
+        </div>
+        {% csrf_token %}
+        <div class="input__div">
+            <div></div>
+            <input class="form_button" type="submit" value="valider" /> 
+        </div>
+    </form>
+    </div>
+{% endblock section %}

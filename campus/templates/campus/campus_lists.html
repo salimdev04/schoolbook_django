@@ -1,0 +1,5 @@
+
+<h1>Campus list </h1>
+{% for campus in campus_lists %}
+    <h3> <a href="{{ campus.get_absolute_url }}" >{{campus}} </a> </h3>
+{% endfor %}

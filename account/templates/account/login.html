@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <div class="account__auth">
+        <h1>Login</h1>
+        <form mehod='post'>
+            {{ form.username }}
+            {{ form.password }}
+            {% csrf_token %}
+            <p> <input class="account__form__button" type='submit' value='Log in'> </p>
+        </form>
+        <div class="account__auth__p">
+            <p>Don't have account ? <a href="{% url "register" %}">register here</a>
+            </p>
+        </div>
+    </div>
+{% endblock content %}

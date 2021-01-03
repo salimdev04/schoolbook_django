@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+    <div class="account__auth">
+        <h1>Register</h1>
+        <form mehod='post'>
+            {{ user_form.username }}
+            {{ user_form.email }}
+            {{ user_form.password }}
+            {{ user_form.password2 }}
+            {% csrf_token %}
+            <p> <input type='submit' class="account__form__button" value='Register'> </p>
+        </form>
+        <div class="account__auth__p">
+            <p>Have already account <a href="{% url "login" %}">login here</a></p>
+        </div>
+    </div>
+{% endblock content %}

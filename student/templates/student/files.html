@@ -1,0 +1,29 @@
+{% extends 'student_layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block section %}
+    <div >
+    <h1> Files </h1>
+    <form mehod='POST'>
+        <div class="input__div">
+            <h4>Naissance</h4>
+            {{ files_form.naissance }}
+        </div>
+        <div class="input__div">
+            <h4>Releve du Bac</h4>
+            {{ files_form.bac_premiere }}
+        </div>
+        <div class="input__div">
+            <h4>Autre fichiers</h4>
+            {{ files_form.bac_deuxieme }}
+        </div>
+        {% comment %} {{ files_form.as_p }} {% endcomment %}
+        {% csrf_token %}
+        <div class="input__div">
+            <div></div>
+            <input class="form_button" type="submit" value="valider" /> 
+        </div>
+    </form>
+    </div>
+{% endblock section %}

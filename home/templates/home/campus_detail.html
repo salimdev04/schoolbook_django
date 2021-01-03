@@ -1,0 +1,43 @@
+{% extends 'home_layout.html' %}
+
+{% block title %}{{ campus.title}}{% endblock %}
+
+{% block sidebar %}
+    {% include 'home_sidebar.html' %}
+{% endblock sidebar %}
+
+
+{% block section %}
+    <div class="div__section">
+        <div class="div__section-title">
+            <h1>{{ campus.title}}</h1>
+        </div>
+
+        <div class="div__section-content">
+            <h3>Pays : {{campus.pays}} </h3>
+            <h3>Region : {{campus.region}} </h3>
+            <h3>Ecole : {{campus.type}} </h3>
+            <h3>Niveau d'Etude : {{campus.study_level}} </h3>
+            <h3>Specialite de formation : {{campus.speciality}} </h3>
+            <h3>Langue d'enseignement : {{campus.langue}} </h3>
+            <h3>Site web de l'ecole : {{campus.site_web}} </h3>
+            <h3>Date limite : {{campus.fin_inscription}} </h3>
+        </div>
+
+        <div class="div__section-footer">
+            <p>{{ campus.description}}</p>
+        </div>
+        
+        
+    </div>
+    
+    
+    <form method="POST">
+        {{admission_form.as_hidden}}
+        {% csrf_token %}
+         <div class="input__div">
+        <div></div>
+         <input class="form_button" type="submit" value="Postuler" /> 
+        </div>
+    </form>
+{% endblock section %}

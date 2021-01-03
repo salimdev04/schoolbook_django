@@ -1,0 +1,32 @@
+<div class="navbar">
+    <div class="navbar__left">
+        <div>SchoolBook</div>
+    </div>
+    <div class="navbar__middle">
+        <div class="navbar__option"  >
+            <a href="{% url 'index' %}">Acceuil</a>
+        </div>
+        <div class="navbar__option" >
+            <a href="#">Message</a>
+        </div>
+        <div class="navbar__option" >
+            <a href="#">Notification</a>
+        </div>
+        <div class="navbar__option" >
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'profile' %}">{{ request.user.username }}</a>
+                {% else %}
+                <a href="{% url 'profile' %}">Profile</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="navbar__right">
+        <div class="navbar__option">
+            {% if request.user.is_authenticated %}
+                <a href="{% url "logout" %}">Deconnexion</a>
+            {% else %}
+                <a href="{% url "login" %}">Connexion</a>
+            {% endif %}
+        </Nava>
+    </div>
+</div>

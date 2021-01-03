@@ -1,0 +1,32 @@
+{% extends 'student_layout.html' %}
+
+{% block title %}Adresse{% endblock %}
+
+{% block section %}
+    <div >
+    <h1> Adresse </h1>
+    <form mehod='POST'>
+        <div class="input__div">
+            <h4>Pays de residence</h4>
+            {{ adresse_form.pays }}
+        </div>
+        <div class="input__div">
+            <h4>Ville de residence</h4>
+            {{ adresse_form.ville }}
+        </div>
+        <div class="input__div">
+            <h4>Adresse complet</h4>
+            {{ adresse_form.adresse }}
+        </div>
+        <div class="input__div">
+            <h4>Email</h4>
+            {{ adresse_form.email }}
+        </div>
+        {% csrf_token %}
+        <div class="input__div">
+        <div></div>
+         <input class="form_button" type="submit" value="valider" /> 
+        </div>
+    </form>
+    </div>
+{% endblock section %}

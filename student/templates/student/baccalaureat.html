@@ -1,0 +1,32 @@
+{% extends 'student_layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block section %}
+    <div >
+    <h1> Baccalaureat </h1>
+    <form mehod='POST'>
+        <div class="input__div">
+            <h4>Annee d'obtention du bac</h4>
+            {{ bac_form.annee }}
+        </div>
+        <div class="input__div">
+            <h4>Serie du Bac</h4>
+            {{ bac_form.serie_bac }}
+        </div>
+        <div class="input__div">
+            <h4>Mention</h4>
+            {{ bac_form.mention }}
+        </div>
+        <div class="input__div">
+            <h4>Pays d'obtention du bac</h4>
+            {{ bac_form.pays_obtention }}
+        </div>
+        {% csrf_token %}
+        <div class="input__div">
+        <div></div>
+         <input class="form_button" type="submit" value="valider" /> 
+        </div>
+    </form>
+    </div>
+{% endblock section %}
